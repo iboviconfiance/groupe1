@@ -93,6 +93,14 @@ body {
   display: block;
   
 }
+.pages {
+  background-image: url(https://i.pinimg.com/736x/b7/66/23/b76623ad12f195436eac6c4a8d41a375.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+
+}
   
 /* PROFIL pour les utilisateurs */
 .profile-card {
