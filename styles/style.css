@@ -126,14 +126,6 @@ body {
   list-style: none;
   justify-content: center;
 }
-#home {
-  min-height: 100vh;
-  background-image: url('../images/img-bzv.jpg');
-  background-size: 100%;
-  background-position:center ;
-  background-repeat: no-repeat;
-
-}
 
 
 .profile-img {
