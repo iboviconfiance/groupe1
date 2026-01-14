@@ -1,0 +1,175 @@
+body { 
+  margin: 0;
+  font-family:'Roboto', Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #222;
+  padding: 10px 15px;
+  position: relative;
+  border-radius: none;
+  margin-top: auto;
+  
+}
+.mon {
+  color: #f5f5f5;
+  font-weight: bold;
+}
+
+#menu {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  z-index: 999;
+  margin-left: auto;
+}
+
+#menu a {
+  color: white;
+  text-decoration: none;
+  margin: 3px;
+  background-color: #000;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: large;
+  transition:all 1.3s ;
+}
+#menu a:hover {
+   background-color:rgb(255, 255, 255);
+   color: #000;
+
+}
+
+
+.btn-nav {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  margin-left: auto;
+
+
+}
+.back-btn {
+   background-color:#f5f5f5;
+   color: #000;
+   border: none;
+   padding: 8px 15px;
+   border-radius: 8px;
+   cursor: pointer;
+   font-size: 16px;
+   text-decoration: none;
+   transition: all 1.3s;
+   font-weight: bolder;
+}
+.back-btn:hover {
+  background-color:burlywood;
+}
+
+
+.barre {
+ width: 30px;
+  height: 5px;
+  background: white;
+  margin-top: 3px;
+  border-radius: 5px;
+}
+.btn-nav:hover {
+  background: #222;
+  transform: scale(1.05);
+}
+
+/* PAGES pour les utilisateurs */
+.page {
+  display: none;
+  padding: 20px;
+}
+
+.page.active {
+  display: block;
+  
+}
+.pages {
+  background-image: url(https://i.pinimg.com/736x/b7/66/23/b76623ad12f195436eac6c4a8d41a375.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+
+}
+  
+/* PROFIL pour les utilisateurs */
+.profile-card {
+  max-width: 300px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #f5f5f5;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.rôle {
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.bb {
+  background: #222;
+  color: #f5f5f5;
+  border-radius: 20px;
+  padding: 6px;
+  font-size: 14px;
+  list-style: none;
+  justify-content: center;
+}
+#home {
+  min-height: 100vh;
+  background-image: url('../images/img-bzv.jpg');
+  background-size: 100%;
+  background-position:center ;
+  background-repeat: no-repeat;
+
+}
+
+
+.profile-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1014px) {
+  #menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;        
+    justify-content: center;    
+    background: #222;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: auto;               
+    height:auto;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+    gap: 20px;                  
+    padding: 20px 0;
+  }
+
+  #menu.show {
+    display: flex;
+  }
+
+  .btn-nav {
+    display: flex;
+  }
+
+}
+

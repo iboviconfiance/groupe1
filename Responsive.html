@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+
+<style>
+/* ===== BASE ===== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  background:#f4f4f4;
+  color:#222;
+}
+
+/* ===== NAVBAR ===== */
+nav{
+  background:#0f172a;
+  color:#fff;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 20px;
+  position:relative;
+}
+
+nav h1{
+  font-size:20px;
+  font-weight:bold;
+}
+
+.burger{
+  font-size:28px;
+  cursor:pointer;
+}
+
+/* MENU */
+nav ul{
+  list-style:none;
+  display:none;
+  flex-direction:column;
+  position:absolute;
+  top:65px;
+  left:0;
+  width:100%;
+  background:#0f172a;
+}
+
+nav ul.active{
+  display:flex;
+}
+
+nav ul li{
+  padding:15px;
+  text-align:center;
+  border-top:1px solid #1e293b;
+}
+
+nav ul li a{
+  color:#fff;
+  text-decoration:none;
+  font-size:18px;
+}
+
+/* ===== PAGES ===== */
+.page{
+  display:none;
+  padding:25px;
+  animation: fade 0.4s ease-in-out;
+}
+
+.page.active{
+  display:block;
+}
+
+/* ===== PROFIL ===== */
+.profile{
+  background:#fff;
+  display:flex;
+  align-items:center;
+  padding:25px;
+  border-radius:15px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.profile img{
+  width:160px;
+  height:160px;
+  object-fit:cover;
+  border-radius:15px;
+  margin-right:25px;
+  transition: transform 0.4s ease;
+}
+
+/* EFFET LOUPE */
+.profile img:hover{
+  transform: scale(1.15);
+}
+
+/* TEXTE */
+.profile h2{
+  margin-bottom:10px;
+}
+
+/* BOUTON RETOUR */
+.back-btn{
+  display:inline-block;
+  margin-bottom:20px;
+  padding:10px 18px;
+  background:#0f172a;
+  color:#fff;
+  border-radius:25px;
+  text-decoration:none;
+  transition:background 0.3s;
+}
+
+.back-btn:hover{
+  background:#1e293b;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+  .profile{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .profile img{
+    margin:0 0 20px 0;
+  }
+}
+
+/* ANIMATION */
+@keyframes fade{
+  from{opacity:0; transform:translateY(10px);}
+  to{opacity:1; transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <h1>Portfolio</h1>
+  <div class="burger" onclick="toggleMenu()">☰</div>
+
+  <ul id="menu">
+    <li><a href="#" onclick="openPage('leyono')">LEYONO Berly</a></li>
+    <li><a href="#" onclick="openPage('charly')">OKOKO Charly</a></li>
+    <li><a href="#" onclick="openPage('confiance')">IBOVI Confiance</a></li>
+    <li><a href="#" onclick="openPage('edvine')">LOUKOMBO Edvine</a></li>
+    <li><a href="#" onclick="openPage('steeven')">NDAKI Steeven</a></li>
+  </ul>
+</nav>
+
+<!-- ===== ACCUEIL ===== -->
+<div id="home" class="page active">
+  <h2>Bienvenue</h2>
+  <p>Sélectionnez une personne via le menu ☰ pour voir plus d’informations.</p>
+</div>
+
+<!-- ===== PROFILS ===== -->
+
+<div id="leyono" class="page">
+  <a class="back-btn" href="#" onclick="goHome()">← Retour</a>
+  <div class="profile">
+    <img src="Photo de Berly.jpg">
+    <div>
+      <h2>LEYONO Berly</h2>
+      <p>Je suis un étudiant en Réseaux et Telecoms passionné par la cybersécurité, le web et les technologies modernes.</p>
+    </div>
+  </div>
+</div>
+
+<div id="charly" class="page">
+  <a class="back-btn" href="#" onclick="goHome()">← Retour</a>
+  <div class="profile">
+    <img src="Photo de Charly.jpg">
+    <div>
+      <h2>OKOKO Charly</h2>
+      <p>Créatif, spécialisé en design et interfaces utilisateur modernes.</p>
+    </div>
+  </div>
+</div>
+
+<div id="confiance" class="page">
+  <a class="back-btn" href="#" onclick="goHome()">← Retour</a>
+  <div class="profile">
+    <img src="https://via.placeholder.com/160">
+    <div>
+      <h2>IBOVI Confiance</h2>
+      <p>Analyste rigoureux, passionné par les projets collaboratifs.</p>
+    </div>
+  </div>
+</div>
+
+<div id="edvine" class="page">
+  <a class="back-btn" href="#" onclick="goHome()">← Retour</a>
+  <div class="profile">
+    <img src="Photo de Edvine.jpg">
+    <div>
+      <h2>LOUKOMBO Edvine</h2>
+      <p>Experte en communication digitale et création de contenu.</p>
+    </div>
+  </div>
+</div>
+
+<div id="steeven" class="page">
+  <a class="back-btn" href="#" onclick="goHome()">← Retour</a>
+  <div class="profile">
+    <img src="Photo de Steeven.jpg">
+    <div>
+      <h2>NDAKI Steeven</h2>
+      <p>Développeur junior motivé et passionné par l’apprentissage.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+function toggleMenu(){
+  document.getElementById("menu").classList.toggle("active");
+}
+
+function openPage(id){
+  document.querySelectorAll('.page').forEach(p=>{
+    p.classList.remove('active');
+  });
+  document.getElementById(id).classList.add('active');
+  document.getElementById("menu").classList.remove("active");
+}
+
+function goHome(){
+  document.querySelectorAll('.page').forEach(p=>{
+    p.classList.remove('active');
+  });
+  document.getElementById('home').classList.add('active');
+}
+</script>
+
+</body>
+</html>
